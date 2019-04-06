@@ -40,6 +40,7 @@ public class GroupController {
     @GetMapping("/add")
     public String view(Model model){
         model.addAttribute("sgroup", new SGroup());
+        model.addAttribute("action", "insert");
         return "/sgroup/add";
     }
 
