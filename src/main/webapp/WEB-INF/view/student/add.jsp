@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@page contentType="text/html" pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
@@ -10,30 +11,33 @@
 <body>
 <div class="container">
     <c:choose>
-        <c:when test="${student.id != 0}">
-            <h3>Редактировать описание фильма</h3>
+        <c:when test="${student.id == 0}">
+            Добавление нового студента
         </c:when>
         <c:otherwise>
-            <h2>Добавить описание фильма</h2>
+            Редактирование данных о студенте <c:out value="${student.name}" />
         </c:otherwise>
     </c:choose>
-    <div class="row">
+    <div class="row" style="margin-top: 2em">
         <div class="col-6">
-            <form method="POST" action="insert">
-                <input type="hidden" name="id" value="" />
-                <div class="form-sGroup">
-                    <input class="form-control" type="text" name="name" placeholder="Name" />
+            <form:form modelAttribute="student" method="POST" action="${action}">
+                <form:hidden path="id" />
+                <div class="form-group">
+                    <form:input class="form-control" path="name" placeholder="Имя" />
                 </div>
-                <div class="form-sGroup">
-                    <input class="form-control" type="text" name="duration" placeholder="Duration" />
+                <div class="form-group">
+                    <form:input class="form-control" path="last_Name" placeholder="Фамилия" />
                 </div>
-                <div class="form-sGroup">
-                    <input class="form-control" type="text" name="restriction" placeholder="Restriction" />
+                <div class="form-group">
+                    <form:input class="form-control" path="birthday" placeholder="День рождения" />
                 </div>
-                <div class="form-sGroup">
-                    <input class="btn btn-primary" type="submit" value="Save" />
+                <div class="form-group">
+                    <form:select class="form-control" path="SGroup" itemLabel="name" itemValue="id" items="${sgroups}"  />
                 </div>
-            </form>
+                <div class="form-group">
+                    <input class="btn btn-primary" type="submit" value="Сохранить" />
+                </div>
+            </form:form>
         </div>
     </div>
 </div>

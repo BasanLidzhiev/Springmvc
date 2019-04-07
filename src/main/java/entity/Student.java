@@ -5,8 +5,6 @@
  */
 package entity;
 
-import entity.Gender.Gender;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
@@ -27,13 +25,12 @@ public class Student implements Serializable{
     private String name;
 
     @Column
-    private String lastName;
+    private String Last_Name;
 
     @Column
     private String birthday;
 
-    @Column
-    private Gender gender;
+
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
     private SGroup sGroup;
 
@@ -56,12 +53,12 @@ public class Student implements Serializable{
         this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLast_Name() {
+        return Last_Name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLast_Name(String last_Name) {
+        this.Last_Name = last_Name;
     }
 
     public String getBirthday() {
@@ -70,14 +67,6 @@ public class Student implements Serializable{
 
     public void setBirthday(String birthday) {
         this.birthday = birthday;
-    }
-
-    public Gender getGender() {
-        return gender;
-    }
-
-    public void setGender(Gender gender) {
-        this.gender = gender;
     }
 
     public SGroup getSGroup() {
@@ -90,8 +79,8 @@ public class Student implements Serializable{
 
     @Override
     public String toString() {
-        return "Student{" + "id=" + id + ", name=" + name + ", last name=" + lastName + ", berthday=" + birthday+
-                ", gender=" + gender+ ", sGroup=" + sGroup + '}';
+        return "Student{" + "id=" + id + ", name=" + name + ", last name=" + Last_Name + ", berthday=" + birthday+
+                ", sGroup=" + sGroup + '}';
     }
 
     @Override
@@ -99,9 +88,8 @@ public class Student implements Serializable{
         int hash = 7;
         hash = 29 * hash + this.id;
         hash = 29 * hash + Objects.hashCode(this.name);
-        hash = 29 * hash + Objects.hashCode(this.lastName);
+        hash = 29 * hash + Objects.hashCode(this.Last_Name);
         hash = 29 * hash + Objects.hashCode(this.birthday);
-        hash = 29 * hash + Objects.hashCode(this.gender);
         hash = 29 * hash + Objects.hashCode(this.sGroup);
         return hash;
     }
@@ -124,13 +112,11 @@ public class Student implements Serializable{
         if (this.birthday != other.birthday) {
             return false;
         }
-        if (this.gender != other.gender) {
-            return false;
-        }
+
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-        if (!Objects.equals(this.lastName, other.lastName)) {
+        if (!Objects.equals(this.Last_Name, other.Last_Name)) {
             return false;
         }
         if (!Objects.equals(this.sGroup, other.sGroup)) {

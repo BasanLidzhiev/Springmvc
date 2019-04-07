@@ -7,11 +7,12 @@ exceptions/StudentException.class
 repository/interfaces/AbstractRepository.class
 service/interfaces/ISGroupService.class
 controller/IndexController.class
+repository/repositoryImpl/GenderRepository.class
 utils/HibernateUtil.class
 entity/SGroup.class
 controller/GroupController.class
 service/SGroupService.class
-entity/Gender/Gender.class
 exceptions/SGroupException.class
+entity/Gender.class
 entity/Student.class
 service/StudentService.class

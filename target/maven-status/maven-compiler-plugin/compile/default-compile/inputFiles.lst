@@ -3,7 +3,7 @@
 /Users/Koks/Desktop/IdeaProjects/WebApp_Apr2/src/main/java/App.java
 /Users/Koks/Desktop/IdeaProjects/WebApp_Apr2/src/main/java/repository/repositoryImpl/SGroupRepository.java
 /Users/Koks/Desktop/IdeaProjects/WebApp_Apr2/src/main/java/repository/interfaces/AbstractRepository.java
-/Users/Koks/Desktop/IdeaProjects/WebApp_Apr2/src/main/java/entity/Gender/Gender.java
+/Users/Koks/Desktop/IdeaProjects/WebApp_Apr2/src/main/java/repository/repositoryImpl/GenderRepository.java
 /Users/Koks/Desktop/IdeaProjects/WebApp_Apr2/src/main/java/controller/StudentController.java
 /Users/Koks/Desktop/IdeaProjects/WebApp_Apr2/src/main/java/service/interfaces/IStudentService.java
 /Users/Koks/Desktop/IdeaProjects/WebApp_Apr2/src/main/java/service/StudentService.java
@@ -16,4 +16,5 @@
 /Users/Koks/Desktop/IdeaProjects/WebApp_Apr2/src/main/java/service/interfaces/ISGroupService.java
 /Users/Koks/Desktop/IdeaProjects/WebApp_Apr2/src/main/java/repository/interfaces/IRepository.java
 /Users/Koks/Desktop/IdeaProjects/WebApp_Apr2/src/main/java/repository/repositoryImpl/StudentRepository.java
+/Users/Koks/Desktop/IdeaProjects/WebApp_Apr2/src/main/java/entity/Gender.java
 /Users/Koks/Desktop/IdeaProjects/WebApp_Apr2/src/main/java/controller/GroupController.java

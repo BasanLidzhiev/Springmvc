@@ -8,7 +8,7 @@
             <generator class="native" />
         </id>
         <property name="name" column="NAME" />
-        <property name="lastName" column="LAST_NAME" />
+        <property name="last_Name" column="LAST_NAME" />
         <property name="birthday" column="BIRTHDAY" />
         <property name="gender" column="GENDER" />
         <many-to-one name="SGroup" column="GROUP_ID" cascade="save-update" />

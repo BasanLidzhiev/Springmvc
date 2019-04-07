@@ -34,7 +34,6 @@
                     <th>Имя</th>
                     <th>Фамилия</th>
                     <th>День рождения</th>
-                    <th>Пол</th>
                     <th>Группа</th>
                     <th colspan="2">Операции</th>
                 </tr>
@@ -44,9 +43,8 @@
                     <tr>
                         <td>${student.id}</td>
                         <td>${student.name}</td>
-                        <td>${student.lastName}</td>
+                        <td>${student.last_Name}</td>
                         <td>${student.birthday}</td>
-                        <td>${student.gender}</td>
                         <td>${student.SGroup.name}</td>
                         <td><a href="/student/edit/${student.id}">редактировать</a></td>
                         <td><a href="/student/delete/${student.id}">удалить</a></td>

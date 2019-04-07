@@ -15,7 +15,10 @@ public class StudentRepository implements IRepository<Student> {
     public Student get(int id) {
         SessionFactory factory = HibernateUtil.getInstance().getSessionFactory();
         Session session = factory.getCurrentSession();
-        return (Student) session.get(Student.class, id);
+        session.getTransaction().begin();
+        Student student = session.get(Student.class, id);
+        session.getTransaction().commit();
+        return student;
     }
 
     @Override
