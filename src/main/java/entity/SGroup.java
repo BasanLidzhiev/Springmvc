@@ -59,6 +59,7 @@ public class SGroup implements Serializable{
 
     @Override
     public int hashCode() {
+
         int hash = 7;
         hash = 31 * hash + this.id;
         hash = 31 * hash + Objects.hashCode(this.name);

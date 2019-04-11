@@ -43,6 +43,7 @@ public class StudentController {
         model.addAttribute("students", list);
         model.addAttribute("success", true);
         return "/student/index";
+
     }
 
     @GetMapping("/add")

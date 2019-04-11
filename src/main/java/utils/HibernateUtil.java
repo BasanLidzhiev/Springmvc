@@ -34,4 +34,5 @@ public class HibernateUtil {
         }
         throw new RuntimeException("Session Factory is not created");
     }
+
 }

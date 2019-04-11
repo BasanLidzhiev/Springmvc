@@ -13,7 +13,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 
-    <title>Категория</title>
+
+    <title>Группа</title>
 </head>
 <body>
 <div class="container">

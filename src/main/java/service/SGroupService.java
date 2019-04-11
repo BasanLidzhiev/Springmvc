@@ -24,7 +24,6 @@ public class SGroupService implements ISGroupService {
         if (!repository.insert(sGroup))
             throw new SGroupException("SGroup don't insert");
 
-
     }
 
     @Override

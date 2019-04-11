@@ -11,4 +11,5 @@ public interface ISGroupService {
     void delete(int id) throws SGroupException;
     List<SGroup> get();
     SGroup get(int id);
+
 }

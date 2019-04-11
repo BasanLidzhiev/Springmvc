@@ -57,6 +57,7 @@ public class GroupController {
         model.addAttribute("success", false);
         model.addAttribute("message", "Êàòåãîðèÿ íå íàéäåíà");
         return "/sgroup/add";
+
     }
 
     @PostMapping(value = "/update")

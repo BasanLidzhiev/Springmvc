@@ -20,6 +20,7 @@
     <mvc:annotation-driven />
 
     <!-- подключаем ViewResolver для передачи модели из контроллера во View -->
+
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/view/" />

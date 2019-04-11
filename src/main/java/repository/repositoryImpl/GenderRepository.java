@@ -23,6 +23,7 @@ public class GenderRepository implements IRepository<Gender> {
         session.getTransaction().commit();
 
         return gender;
+
     }
 
     @Override

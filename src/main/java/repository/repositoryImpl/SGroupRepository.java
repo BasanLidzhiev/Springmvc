@@ -29,6 +29,7 @@ public class SGroupRepository implements IRepository<SGroup> {
         List<SGroup> list =  session.createQuery( "from SGroup" ).list();
         session.getTransaction().commit();
         return list;
+
     }
 
     @Override

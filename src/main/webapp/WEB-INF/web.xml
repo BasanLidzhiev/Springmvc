@@ -6,6 +6,7 @@
 
   <display-name>Archetype Created Web Application</display-name>
 
+
   <listner>
     <listner-class>org.springframework.web.context.ContextLoaderListner</listner-class>
   </listner>

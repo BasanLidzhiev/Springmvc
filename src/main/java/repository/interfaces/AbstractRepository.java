@@ -19,6 +19,7 @@ public class AbstractRepository<T> implements IRepository<T>{
         SessionFactory factory = HibernateUtil.getInstance().getSessionFactory();
         Session session = factory.getCurrentSession();
         return (T) session.get(clazz, id);
+
     }
 
     @Override
