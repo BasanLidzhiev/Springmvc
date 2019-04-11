@@ -17,7 +17,7 @@
 <body>
     <div class="col-12">
         <a href="/sgroup/" class="btn btn-primary">Показать все группы</a>
-    </div>
+    </div> <br>
     <div class="col-12">
         <a href="/student/" class="btn btn-primary">Показать всех студентов</a>
     </div>

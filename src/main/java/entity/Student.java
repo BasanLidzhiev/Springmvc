@@ -29,10 +29,8 @@ public class Student implements Serializable{
 
     @Column
     private String birthday;
-
-
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-    private SGroup sGroup;
+    private SGroup sgroup;
 
 
     public Student(){}
@@ -70,17 +68,17 @@ public class Student implements Serializable{
     }
 
     public SGroup getSGroup() {
-        return sGroup;
+        return sgroup;
     }
 
     public void setSGroup(SGroup sGroup) {
-        this.sGroup = sGroup;
+        this.sgroup = sGroup;
     }
 
     @Override
     public String toString() {
         return "Student{" + "id=" + id + ", name=" + name + ", last name=" + Last_Name + ", berthday=" + birthday+
-                ", sGroup=" + sGroup + '}';
+                ", sGroup=" + sgroup + '}';
     }
 
     @Override
@@ -90,7 +88,7 @@ public class Student implements Serializable{
         hash = 29 * hash + Objects.hashCode(this.name);
         hash = 29 * hash + Objects.hashCode(this.Last_Name);
         hash = 29 * hash + Objects.hashCode(this.birthday);
-        hash = 29 * hash + Objects.hashCode(this.sGroup);
+        hash = 29 * hash + Objects.hashCode(this.sgroup);
         return hash;
     }
 
@@ -119,7 +117,7 @@ public class Student implements Serializable{
         if (!Objects.equals(this.Last_Name, other.Last_Name)) {
             return false;
         }
-        if (!Objects.equals(this.sGroup, other.sGroup)) {
+        if (!Objects.equals(this.sgroup, other.sgroup)) {
             return false;
         }
         return true;

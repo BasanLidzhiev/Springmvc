@@ -1,21 +1,28 @@
+<%--
+    Document   : add
+    Created on : 27.03.2019, 14:03:19
+    Author     : admin
+--%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@page contentType="text/html" pageEncoding="utf-8"%>
+<%@page contentType="text/html" pageEncoding="windows-1251"%>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <title>Р¤РёР»СЊРј</title>
+
+    <title>Категория</title>
 </head>
 <body>
 <div class="container">
     <c:choose>
         <c:when test="${student.id == 0}">
-            Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕРіРѕ СЃС‚СѓРґРµРЅС‚Р°
+            Создание новой учебной группы
         </c:when>
         <c:otherwise>
-            Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РґР°РЅРЅС‹С… Рѕ СЃС‚СѓРґРµРЅС‚Рµ <c:out value="${student.name}" />
+            Редактирование учебной группы: <c:out value="${student.name}" />
         </c:otherwise>
     </c:choose>
     <div class="row" style="margin-top: 2em">
@@ -23,19 +30,20 @@
             <form:form modelAttribute="student" method="POST" action="${action}">
                 <form:hidden path="id" />
                 <div class="form-group">
-                    <form:input class="form-control" path="name" placeholder="РРјСЏ" />
+                    <form:input class="form-control" path="name" placeholder="Имя" />
                 </div>
                 <div class="form-group">
-                    <form:input class="form-control" path="last_Name" placeholder="Р¤Р°РјРёР»РёСЏ" />
+                    <form:input class="form-control" path="last_Name" placeholder="Фамилия" />
                 </div>
                 <div class="form-group">
-                    <form:input class="form-control" path="birthday" placeholder="Р”РµРЅСЊ СЂРѕР¶РґРµРЅРёСЏ" />
+                    <form:input class="form-control" path="birthday" placeholder="День рождения" />
                 </div>
                 <div class="form-group">
                     <form:select class="form-control" path="SGroup" itemLabel="name" itemValue="id" items="${sgroups}"  />
                 </div>
+
                 <div class="form-group">
-                    <input class="btn btn-primary" type="submit" value="РЎРѕС…СЂР°РЅРёС‚СЊ" />
+                    <input class="btn btn-primary" type="submit" value="Сохранить" />
                 </div>
             </form:form>
         </div>
